@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>S.VICHE | SYNAPTIC_OVERFLOW</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Space+Grotesk:wght@300;400;500;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#701c6a",
+                    "inverse-primary": "#004eea",
+                    "on-error": "#490013",
+                    "error-container": "#a70138",
+                    "on-primary-fixed": "#000000",
+                    "on-primary-fixed-variant": "#002376",
+                    "error": "#ff6e84",
+                    "inverse-surface": "#fcf8f8",
+                    "on-tertiary": "#711d6a",
+                    "outline": "#777575",
+                    "secondary-container": "#3738a1",
+                    "on-surface-variant": "#adaaaa",
+                    "secondary": "#9093ff",
+                    "on-tertiary-container": "#661060",
+                    "secondary-dim": "#9093ff",
+                    "primary-fixed": "#809bff",
+                    "tertiary-fixed-dim": "#ef8cde",
+                    "surface-tint": "#94aaff",
+                    "on-secondary-fixed": "#23228e",
+                    "surface-variant": "#262626",
+                    "primary-dim": "#3367ff",
+                    "surface-container-lowest": "#000000",
+                    "inverse-on-surface": "#565554",
+                    "tertiary-dim": "#ef8cde",
+                    "primary": "#94aaff",
+                    "on-secondary": "#090079",
+                    "tertiary-fixed": "#fe99ed",
+                    "surface-container-highest": "#262626",
+                    "surface-bright": "#2c2c2c",
+                    "on-error-container": "#ffb2b9",
+                    "primary-container": "#809bff",
+                    "on-background": "#ffffff",
+                    "tertiary": "#ffb0ef",
+                    "surface-container-high": "#201f1f",
+                    "background": "#0e0e0e",
+                    "on-tertiary-fixed": "#450042",
+                    "surface-container": "#1a1919",
+                    "surface-container-low": "#131313",
+                    "primary-fixed-dim": "#6c8cff",
+                    "on-secondary-fixed-variant": "#4143ab",
+                    "surface": "#0e0e0e",
+                    "secondary-fixed-dim": "#bdbeff",
+                    "on-primary": "#00257b",
+                    "on-primary-container": "#001b61",
+                    "on-secondary-container": "#ccccff",
+                    "outline-variant": "#494847",
+                    "secondary-fixed": "#cdcdff",
+                    "error-dim": "#d73357",
+                    "on-surface": "#ffffff",
+                    "tertiary-container": "#fe99ed",
+                    "surface-dim": "#0e0e0e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Space Grotesk"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .architect-grid {
+            background-image: linear-gradient(to right, rgba(73, 72, 71, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(73, 72, 71, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .cinematic-glow {
+            box-shadow: 0 0 60px rgba(51, 103, 255, 0.05);
+        }
+        .glass-panel {
+            background: rgba(44, 44, 44, 0.6);
+            backdrop-filter: blur(24px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-dim selection:text-white">
+<!-- Top Navigation -->
+<header class="fixed top-0 left-0 right-0 z-50 flex justify-center w-full">
+<nav class="bg-[#0e0e0e]/60 backdrop-blur-xl rounded-full mt-4 mx-auto max-w-fit px-6 py-2 border border-[#2c2c2c]/20 shadow-[0_0_40px_rgba(41,98,255,0.05)] flex items-center gap-8">
+<div class="text-xl font-black text-white tracking-tighter font-headline uppercase">S.VICHE</div>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-gray-400 font-medium font-label text-xs uppercase tracking-tight hover:text-white hover:scale-105 transition-all duration-300 scale-95 active:duration-75" href="#">Home</a>
+<a class="text-[#2962FF] font-black border-b-2 border-[#2962FF] pb-0.5 font-label text-xs uppercase tracking-tight hover:text-white hover:scale-105 transition-all duration-300 scale-95 active:duration-75" href="#">Projects</a>
+<a class="text-gray-400 font-medium font-label text-xs uppercase tracking-tight hover:text-white hover:scale-105 transition-all duration-300 scale-95 active:duration-75" href="#">About</a>
+<a class="text-gray-400 font-medium font-label text-xs uppercase tracking-tight hover:text-white hover:scale-105 transition-all duration-300 scale-95 active:duration-75" href="#">Connect</a>
+</div>
+<div class="flex items-center gap-3">
+<button class="material-symbols-outlined text-gray-400 hover:text-white transition-colors">grid_view</button>
+<button class="material-symbols-outlined text-gray-400 hover:text-white transition-colors">terminal</button>
+</div>
+</nav>
+</header>
+<main class="relative">
+<!-- Hero Section -->
+<section class="relative min-h-screen flex flex-col justify-end architect-grid pt-32 px-6 pb-24 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Technical Infrastructure" class="w-full h-full object-cover opacity-40 mix-blend-luminosity" data-alt="dramatic wide shot of a high-tech server room with glowing blue neon lights, massive cabling, and sleek metal racks in a dark cinematic environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0WKmR4X1O29IdMTlZjWHCdu3JO5iDL7HcdznyeyrelSGMYQsOm8viIyiaYu_-aomujHxUbzy4OpXiuX2saZ_lVDtqZ_rd3NzQf0y4jO5ArYZ0lxqcAAMGdx-zzKgeX_YXII_qkKWgc5qJbVWR_4h7XJ3YG897nbRGusGIeN6DydykXMmLUcS4HPxa25wpoJXCyQ2Oq-0ewE8tTuM2zGF6jMcNPIup2BBxli-QdNRfSZ-fhiUzL26qsUj0WjNt7HJQzh1Lhs3QGTE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto w-full">
+<div class="inline-block py-1 px-3 border border-outline-variant/30 rounded-full bg-surface-container-low/50 backdrop-blur-md mb-6">
+<span class="font-label text-[10px] uppercase tracking-[0.3em] text-primary">Status: Deployed_v2.0.4</span>
+</div>
+<h1 class="font-headline font-extrabold text-6xl md:text-9xl tracking-tighter leading-none mb-4">
+                    SYNAPTIC_<br/><span class="text-primary-dim">OVERFLOW</span>
+</h1>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mt-12">
+<p class="font-label text-sm md:text-base text-gray-400 max-w-xl leading-relaxed uppercase tracking-wider">
+                        High-throughput distributed neural mesh for processing erratic data streams across multi-cloud environments. Zero-latency synchronization for enterprise-scale cognitive architecture.
+                    </p>
+<div class="flex gap-4">
+<button class="px-8 py-4 bg-gradient-to-tr from-primary to-primary-dim text-on-primary-fixed font-bold rounded-full title-sm hover:scale-105 transition-transform cinematic-glow uppercase font-headline text-sm">
+                            View on GitHub
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Challenge / Approach -->
+<section class="bg-surface-container-low py-32 px-6">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-24">
+<div class="space-y-8">
+<h2 class="font-label text-[10px] uppercase tracking-[0.5em] text-outline">Section_01 // The Challenge</h2>
+<h3 class="font-headline font-bold text-4xl tracking-tight">Managing chaotic telemetry at 10GB/s scale.</h3>
+<p class="text-on-surface-variant leading-relaxed text-lg font-light">
+                        Existing legacy systems failed to maintain state consistency during peak traffic bursts. The requirement was a system capable of 99.999% uptime while handling non-linear data spikes without horizontal scaling latency.
+                    </p>
+</div>
+<div class="space-y-8 border-l border-outline-variant/20 pl-8 md:pl-24">
+<h2 class="font-label text-[10px] uppercase tracking-[0.5em] text-outline">Section_02 // The Approach</h2>
+<h3 class="font-headline font-bold text-4xl tracking-tight">Decoupled execution via immutable state layers.</h3>
+<p class="text-on-surface-variant leading-relaxed text-lg font-light">
+                        By utilizing a custom-built distributed consensus algorithm and memory isolation, we architected a core that operates on a "True-Zero" trust model, ensuring that every byte is validated and synchronized before persistence.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Architecture Core -->
+<section class="py-32 px-6 bg-background architect-grid relative">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-24">
+<h2 class="font-label text-[10px] uppercase tracking-[0.5em] text-primary mb-4">Internal_Framework</h2>
+<h3 class="font-headline font-extrabold text-5xl tracking-tighter uppercase">Architecture_Core</h3>
+</div>
+<div class="relative glass-panel border border-outline-variant/10 rounded-xl p-12 overflow-hidden cinematic-glow">
+<!-- Diagram Placeholder -->
+<div class="flex flex-col md:flex-row items-center justify-between gap-12">
+<div class="flex-1 space-y-4">
+<div class="bg-surface-container-highest p-6 rounded-lg border-l-4 border-primary">
+<span class="font-label text-[10px] uppercase text-outline block mb-2">Ingress_Layer</span>
+<h4 class="font-headline font-bold text-xl">Traffic Ingress</h4>
+<p class="text-sm text-on-surface-variant mt-2 font-label">Edge-optimized proxy with automatic TLS termination and DDoS mitigation.</p>
+</div>
+<div class="bg-surface-container-highest p-6 rounded-lg border-l-4 border-primary">
+<span class="font-label text-[10px] uppercase text-outline block mb-2">Logic_Layer</span>
+<h4 class="font-headline font-bold text-xl">Load Balancer</h4>
+<p class="text-sm text-on-surface-variant mt-2 font-label">Weight-based distribution algorithm with health-aware node detection.</p>
+</div>
+</div>
+<div class="flex-shrink-0">
+<div class="w-32 h-32 rounded-full border-4 border-dashed border-primary-dim flex items-center justify-center animate-pulse">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="hub">hub</span>
+</div>
+</div>
+<div class="flex-1 space-y-4">
+<div class="bg-surface-container-highest p-6 rounded-lg border-r-4 border-primary-dim text-right">
+<span class="font-label text-[10px] uppercase text-outline block mb-2">Data_Persistence</span>
+<h4 class="font-headline font-bold text-xl">Cold Storage</h4>
+<p class="text-sm text-on-surface-variant mt-2 font-label">Asynchronous archival layer for long-term audit compliance and recovery.</p>
+</div>
+<div class="bg-surface-container-highest p-6 rounded-lg border-r-4 border-primary-dim text-right">
+<span class="font-label text-[10px] uppercase text-outline block mb-2">Compute_Cluster</span>
+<h4 class="font-headline font-bold text-xl">Process Nodes</h4>
+<p class="text-sm text-on-surface-variant mt-2 font-label">Isolated execution environments for heavy-duty neural computation.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Observability Interface -->
+<section class="bg-surface-container-low py-32 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div>
+<h2 class="font-label text-[10px] uppercase tracking-[0.5em] text-outline mb-4">Module_03 // Analytics</h2>
+<h3 class="font-headline font-extrabold text-5xl tracking-tighter uppercase">OBSERVABILITY_INTERFACE</h3>
+</div>
+<div class="font-label text-xs text-primary-dim bg-primary/10 px-4 py-2 rounded-full border border-primary/20">
+                        LIVE_FEED_ACTIVE
+                    </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Metric 1 -->
+<div class="bg-surface p-8 rounded-xl border border-outline-variant/10">
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="speed">speed</span>
+<span class="font-label text-[10px] text-on-surface-variant uppercase">CPU_UTILIZATION</span>
+</div>
+<div class="text-4xl font-headline font-black mb-2">24.8<span class="text-primary-dim">%</span></div>
+<div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[24.8%]"></div>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="bg-surface p-8 rounded-xl border border-outline-variant/10">
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="memory">memory</span>
+<span class="font-label text-[10px] text-on-surface-variant uppercase">RAM_BUFFER</span>
+</div>
+<div class="text-4xl font-headline font-black mb-2">1.2<span class="text-primary-dim">TB</span></div>
+<div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[80%]"></div>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="bg-surface p-8 rounded-xl border border-outline-variant/10">
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="sync_alt">sync_alt</span>
+<span class="font-label text-[10px] text-on-surface-variant uppercase">NET_LATENCY</span>
+</div>
+<div class="text-4xl font-headline font-black mb-2">0.04<span class="text-primary-dim">MS</span></div>
+<div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[10%]"></div>
+</div>
+</div>
+</div>
+<!-- Dashboard Visual -->
+<div class="mt-8 rounded-xl border border-outline-variant/10 bg-surface h-[400px] flex items-center justify-center relative overflow-hidden group">
+<img alt="Data Dashboard" class="w-full h-full object-cover opacity-60" data-alt="abstract data visualization screen with complex lines, nodes, and neon glowing charts on a dark interface background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFhVEvURUXqVhAl0Vc4gU8h9fxbS9uLTw_HLXs2b9uj7wxSMAMA4KHGpHNt0cHAP-vxi_3Ev2s6XLsvnyCN_BKvOXMugz4dYZlVBh3v-OvFp2F0_1qIKUVp2udk2sUpGdBnGMu7A40sxnfmj_8QDBOW9vD5w4VYGcN7YbJykD-IWjDk1Q_pWFPK8phhah7UB95yd-cvOG3nRXql_MoIhm67UVJ4UsYZwYqDlb4WvGNjbbUesMLuoMQnXD7--rw8x_T0IXn__kWxEI"/>
+<div class="absolute inset-0 flex items-center justify-center bg-background/20 backdrop-blur-[2px]">
+<div class="text-center font-label">
+<span class="material-symbols-outlined text-6xl text-primary mb-4" data-icon="monitoring">monitoring</span>
+<div class="uppercase tracking-widest text-xs">Accessing System Telemetry...</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Tech Stack & Links -->
+<section class="py-32 px-6">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-24">
+<div class="flex-1 space-y-12">
+<h2 class="font-label text-[10px] uppercase tracking-[0.5em] text-outline">Module_04 // Foundation</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="security">security</span>
+<span class="font-headline font-bold text-lg uppercase">Memory Isolation</span>
+</div>
+<p class="text-sm text-on-surface-variant font-light leading-relaxed">Hardware-level secure enclaves ensuring processing logic is never exposed to the host kernel.</p>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="account_tree">account_tree</span>
+<span class="font-headline font-bold text-lg uppercase">Distributed Consensus</span>
+</div>
+<p class="text-sm text-on-surface-variant font-light leading-relaxed">Paxos-based agreement protocols tailored for sub-millisecond edge networking.</p>
+</div>
+</div>
+<div class="pt-12 border-t border-outline-variant/10">
+<h4 class="font-label text-[10px] uppercase tracking-widest text-outline mb-6">TECH_STACK</h4>
+<div class="flex flex-wrap gap-4">
+<span class="px-4 py-2 bg-surface-container-high rounded text-xs font-label uppercase">Rust</span>
+<span class="px-4 py-2 bg-surface-container-high rounded text-xs font-label uppercase">WebAssembly</span>
+<span class="px-4 py-2 bg-surface-container-high rounded text-xs font-label uppercase">GraphQL</span>
+<span class="px-4 py-2 bg-surface-container-high rounded text-xs font-label uppercase">Kubernetes</span>
+<span class="px-4 py-2 bg-surface-container-high rounded text-xs font-label uppercase">Redis-Stack</span>
+</div>
+</div>
+</div>
+<div class="md:w-96 space-y-6">
+<div class="bg-primary/5 p-12 rounded-xl border border-primary/10 cinematic-glow flex flex-col gap-6">
+<h3 class="font-headline font-bold text-2xl uppercase tracking-tight">Access Points</h3>
+<button class="w-full px-8 py-5 bg-gradient-to-tr from-primary to-primary-dim text-on-primary-fixed font-bold rounded-full title-sm hover:scale-[1.02] active:scale-95 transition-all uppercase font-headline text-sm shadow-lg shadow-primary/20">
+                            Live System Demo
+                        </button>
+<button class="w-full px-8 py-5 bg-transparent border-2 border-outline-variant/30 text-white font-bold rounded-full title-sm hover:border-primary/50 hover:bg-primary/5 transition-all uppercase font-headline text-sm">
+                            Technical Whitepaper
+                        </button>
+<div class="pt-6 flex items-center justify-between text-outline">
+<span class="font-label text-[10px] uppercase">Ref ID: SV-00129</span>
+<span class="font-label text-[10px] uppercase">Updated: May 2024</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 border-t border-[#131313] bg-[#0e0e0e]">
+<div class="max-w-7xl mx-auto w-full flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="text-white font-bold font-headline uppercase tracking-tighter">S.VICHE</div>
+<div class="text-gray-500 font-label text-[10px] uppercase tracking-[0.2em] text-center md:text-left">
+                © 2024 Sarthak Viche. Engineered for the digital void.
+            </div>
+<div class="flex gap-8">
+<a class="text-gray-500 hover:text-[#2962FF] transition-colors duration-500 font-label text-[10px] uppercase tracking-[0.2em] opacity-80 hover:opacity-100" href="#">LinkedIn</a>
+<a class="text-gray-500 hover:text-[#2962FF] transition-colors duration-500 font-label text-[10px] uppercase tracking-[0.2em] opacity-80 hover:opacity-100" href="#">GitHub</a>
+<a class="text-gray-500 hover:text-[#2962FF] transition-colors duration-500 font-label text-[10px] uppercase tracking-[0.2em] opacity-80 hover:opacity-100" href="#">Twitter</a>
+</div>
+</div>
+</footer>
+</body></html>

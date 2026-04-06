@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors from the design */
+  --color-primary: #94aaff;
+  --color-primary-dim: #3367ff;
+  --color-primary-container: #809bff;
+  --color-on-primary: #00257b;
+  --color-on-primary-container: #001b61;
+  --color-on-primary-fixed: #000000;
+  --color-on-primary-fixed-variant: #002376;
+
+  --color-secondary: #9093ff;
+  --color-secondary-dim: #9093ff;
+  --color-secondary-container: #3738a1;
+  --color-on-secondary: #090079;
+  --color-on-secondary-container: #ccccff;
+
+  --color-tertiary: #ffb0ef;
+  --color-tertiary-dim: #ef8cde;
+  --color-tertiary-container: #fe99ed;
+  --color-on-tertiary: #711d6a;
+  --color-on-tertiary-container: #661060;
+
+  --color-background: #0e0e0e;
+  --color-on-background: #ffffff;
+
+  --color-surface: #0e0e0e;
+  --color-on-surface: #ffffff;
+  --color-on-surface-variant: #adaaaa;
+  --color-surface-variant: #262626;
+  --color-surface-bright: #2c2c2c;
+  --color-surface-dim: #0e0e0e;
+  --color-surface-container: #1a1919;
+  --color-surface-container-low: #131313;
+  --color-surface-container-lowest: #000000;
+  --color-surface-container-high: #201f1f;
+  --color-surface-container-highest: #262626;
+
+  --color-outline: #777575;
+  --color-outline-variant: #494847;
+
+  --color-error: #ff6e84;
+  --color-error-container: #a70138;
+  --color-on-error: #490013;
+  --color-on-error-container: #ffb2b9;
+
+  /* Fonts */
+  --font-headline: "Manrope", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-label: "Space Grotesk", sans-serif;
+
+  /* Border Radius */
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-full: 9999px;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-body overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container;
+    margin: 0;
+  }
+}
+
+@layer components {
+  .architect-grid {
+    background-image: linear-gradient(to right, #494847 1px, transparent 1px),
+                      linear-gradient(to bottom, #494847 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.05;
+  }
+
+  .glass-nav {
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+  }
+
+  .cinematic-glow {
+    box-shadow: 0 0 60px rgba(51, 103, 255, 0.05);
+  }
+
+  .glass-panel {
+    background: rgba(44, 44, 44, 0.6);
+    backdrop-filter: blur(24px);
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
