@@ -280,54 +280,68 @@ const ProjectDetail = () => {
         </div>
       </section>
 
-      {/* Problem & Solution - Enhanced Contrast & Boldness */}
-      <section className="py-24 md:py-48 px-6 border-t border-white/5 bg-[#0a0a0a]">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-24 md:gap-40">
-          <div className="space-y-10 group">
-            <h2 className="font-label text-[11px] uppercase tracking-[0.6em] text-primary/60 flex items-center gap-4">
+      {/* Problem & Solution - Refined Typography & Balance */}
+      <section className="py-24 md:py-36 px-6 border-t border-white/5 bg-[#0a0a0a]">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-32">
+          <div className="space-y-8 group">
+            <h2 className="font-label text-[10px] uppercase tracking-[0.6em] text-primary/60 flex items-center gap-4">
               <span className="w-8 h-px bg-primary/30"></span>
               The Problem Statement
             </h2>
-            <p className="text-white leading-[1.1] text-4xl md:text-6xl font-headline font-black uppercase tracking-tighter group-hover:text-primary transition-colors duration-500">
+            <p className="text-white leading-[1.3] text-2xl md:text-3xl font-body font-medium tracking-[-0.03em] group-hover:text-primary transition-colors duration-500">
               {project.problem}
             </p>
           </div>
-          <div className="space-y-10">
-            <h2 className="font-label text-[11px] uppercase tracking-[0.6em] text-primary/60 flex items-center gap-4">
+          <div className="space-y-8">
+            <h2 className="font-label text-[10px] uppercase tracking-[0.6em] text-primary/60 flex items-center gap-4">
               <span className="w-8 h-px bg-primary/30"></span>
               Engineered Solution
             </h2>
-            <p className="text-gray-400 leading-relaxed text-xl md:text-2xl font-light italic border-l border-white/10 pl-10">
+            <p className="text-gray-400 leading-relaxed text-lg md:text-xl font-light italic border-l border-white/10 pl-10">
               {project.solution}
             </p>
           </div>
         </div>
       </section>
 
-      {/* Architecture Visualizer - High Contrast Fix */}
-      <section className="py-32 px-6 bg-[#0e0e0e] architect-grid relative border-y border-white/5">
+      {/* Architecture Visualizer - High Visibility Fix */}
+      <section className="py-32 px-6 bg-[#0e0e0e] relative border-y border-white/5 overflow-hidden">
+        {/* Decorative architectural elements for depth */}
+        <div className="absolute top-0 right-0 w-1/3 h-full architect-grid opacity-20 pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-1/3 h-full architect-grid opacity-20 pointer-events-none"></div>
+        
         <div className="max-w-7xl mx-auto relative z-10 text-center mb-24">
-            <h2 className="font-label text-[11px] uppercase tracking-[0.6em] text-primary mb-6">Pipeline_Intelligence</h2>
-            <h3 className="font-headline font-black text-5xl md:text-7xl tracking-tighter uppercase text-white">System Architecture</h3>
+            <h2 className="font-label text-[10px] uppercase tracking-[0.6em] text-primary mb-6">Pipeline_Intelligence</h2>
+            <h3 className="font-headline font-black text-5xl md:text-7xl tracking-tighter uppercase text-white outline-text">System Architecture</h3>
         </div>
         
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 pb-4">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8 md:gap-6 relative z-10">
           {project.architecture.map((item, idx) => (
             <React.Fragment key={idx}>
               <motion.div 
-                initial={{ opacity: 0, y: 40 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: idx * 0.1, type: "spring", stiffness: 100 }}
-                className="w-full md:w-72 bg-[#1a1a1a] p-8 rounded-2xl border-2 border-primary/20 hover:border-primary transition-all duration-300 shadow-2xl relative group"
+                transition={{ delay: idx * 0.1 }}
+                className="w-full md:w-72 bg-gradient-to-b from-[#1a1a1a] to-[#0a0a0a] p-8 rounded-2xl border border-white/10 shadow-2xl relative group overflow-hidden"
               >
-                <div className="absolute -top-4 -left-4 w-10 h-10 bg-primary text-black font-black flex items-center justify-center rounded-lg text-xs font-label">0{idx+1}</div>
-                <span className="font-label text-[10px] uppercase tracking-widest text-primary/70 block mb-3">{item.step}</span>
-                <h4 className="font-headline font-black text-lg md:text-xl tracking-tight text-white uppercase leading-none">{item.desc}</h4>
-                <div className="mt-4 h-1 w-0 group-hover:w-full bg-primary transition-all duration-500"></div>
+                {/* Glow effect for card */}
+                <div className="absolute -top-12 -right-12 w-24 h-24 bg-primary/20 blur-[40px] rounded-full group-hover:bg-primary/40 transition-all duration-500"></div>
+                
+                <div className="flex items-center justify-between mb-6">
+                  <div className="w-8 h-8 border border-primary/40 flex items-center justify-center rounded text-[10px] font-label text-primary">{idx+1}</div>
+                  <span className="font-label text-[9px] uppercase tracking-[0.3em] text-primary/40">{item.step}</span>
+                </div>
+                
+                <h4 className="font-headline font-bold text-lg tracking-tight text-white uppercase leading-tight min-h-[3rem]">{item.desc}</h4>
+                
+                <div className="mt-6 flex items-center gap-2">
+                  <div className="h-px flex-1 bg-white/10"></div>
+                  <div className="w-1.5 h-1.5 rounded-full bg-primary/40"></div>
+                </div>
               </motion.div>
               {idx < project.architecture.length - 1 && (
-                <div className="text-primary flex items-center justify-center">
-                  <span className="material-symbols-outlined text-4xl md:rotate-0 rotate-90 opacity-40">double_arrow</span>
+                <div className="text-primary/20 flex items-center justify-center py-4">
+                  <span className="material-symbols-outlined text-4xl md:rotate-0 rotate-90 scale-x-125">trending_flat</span>
                 </div>
               )}
             </React.Fragment>
