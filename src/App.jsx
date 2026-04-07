@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import ProjectDetail from './pages/ProjectDetail';
 import CustomCursor from './components/CustomCursor';
+import ScrollToTop from './components/ScrollToTop';
 
 // Main Layout Wrapper
 const Layout = ({ children }) => {
@@ -36,6 +37,7 @@ const Layout = ({ children }) => {
 
   return (
     <div className="min-h-screen bg-surface flex flex-col">
+      <ScrollToTop />
       <CustomCursor />
       <Header />
       <main className="flex-grow">
@@ -44,7 +46,7 @@ const Layout = ({ children }) => {
       <Footer />
     </div>
   );
-};
+}
 
 function App() {
   return (

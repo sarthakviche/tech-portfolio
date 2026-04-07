@@ -20,6 +20,14 @@ const Header = () => {
           <a className="text-gray-400 font-medium font-label text-xs tracking-tight uppercase hover:text-white hover:scale-105 transition-all duration-300 no-underline" href="#connect">Connect</a>
         </div>
         <div className="flex items-center gap-4 ml-4">
+          <a
+            href="/resume.pdf"
+            download
+            className="hidden sm:flex items-center gap-2 px-4 py-1.5 bg-primary/10 border border-primary/30 rounded-full font-label text-[10px] uppercase tracking-widest text-primary hover:bg-primary hover:text-white transition-all duration-300"
+          >
+            <span className="material-symbols-outlined text-sm">download</span>
+            Resume
+          </a>
           <span className="material-symbols-outlined text-gray-400 hover:text-white cursor-pointer transition-colors" data-icon="grid_view">grid_view</span>
           <span className="material-symbols-outlined text-gray-400 hover:text-white cursor-pointer transition-colors" data-icon="terminal">terminal</span>
         </div>

@@ -33,8 +33,9 @@ const projectData = {
       "Demonstrated end-to-end automation of fraud analysis workflow"
     ],
     links: [
-      { label: "GitHub Repository", url: "https://github.com/sarthakviche" },
-      { label: "Demo Video", url: "#" }
+      { label: "GitHub Repository", url: "https://github.com/sarthakviche", type: "github" },
+      { label: "Demo Video", url: "#", type: "youtube" },
+      { label: "Technical PPT", url: "#", type: "ppt" }
     ],
     image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2070&auto=format&fit=crop"
   },
@@ -67,8 +68,9 @@ const projectData = {
       "Strong real-world applicability in smart healthcare systems"
     ],
     links: [
-      { label: "Hackathon Demo", url: "#" },
-      { label: "GitHub", url: "https://github.com/sarthakviche" }
+      { label: "GitHub Repository", url: "https://github.com/sarthakviche", type: "github" },
+      { label: "Project Demo", url: "#", type: "youtube" },
+      { label: "Presentation", url: "#", type: "ppt" }
     ],
     image: "https://images.unsplash.com/photo-1587745416684-47953f16f02f?q=80&w=2070&auto=format&fit=crop"
   },
@@ -100,8 +102,9 @@ const projectData = {
       "Demonstrated real-world industrial AI use case"
     ],
     links: [
-      { label: "GitHub", url: "https://github.com/sarthakviche" },
-      { label: "Sample Outputs", url: "#" }
+      { label: "GitHub Repository", url: "https://github.com/sarthakviche", type: "github" },
+      { label: "Demo Video", url: "#", type: "youtube" },
+      { label: "Technical PPT", url: "#", type: "ppt" }
     ],
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop"
   },
@@ -133,7 +136,9 @@ const projectData = {
       "Scalable marketing workflow"
     ],
     links: [
-      { label: "GitHub Repository", url: "https://github.com/sarthakviche" }
+      { label: "GitHub Repository", url: "https://github.com/sarthakviche", type: "github" },
+      { label: "Workflow Demo", url: "#", type: "youtube" },
+      { label: "Strategy Slides", url: "#", type: "ppt" }
     ],
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop"
   },
@@ -164,7 +169,9 @@ const projectData = {
       "Understanding limitations of AI in mental health"
     ],
     links: [
-      { label: "Research GitHub", url: "https://github.com/sarthakviche" }
+      { label: "GitHub Repository", url: "https://github.com/sarthakviche", type: "github" },
+      { label: "Research Overview", url: "#", type: "youtube" },
+      { label: "Findings PPT", url: "#", type: "ppt" }
     ],
     image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=2062&auto=format&fit=crop"
   },
@@ -196,7 +203,9 @@ const projectData = {
       "Strategic insight into agent orchestration"
     ],
     links: [
-      { label: "Technical Whitepaper", url: "#" }
+      { label: "GitHub Repository", url: "https://github.com/sarthakviche", type: "github" },
+      { label: "Research Video", url: "#", type: "youtube" },
+      { label: "Whitepaper PPT", url: "#", type: "ppt" }
     ],
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop"
   }
@@ -217,37 +226,46 @@ const ProjectDetail = () => {
     );
   }
 
+  const getLinkIcon = (type) => {
+    switch(type) {
+      case 'github': return 'code';
+      case 'youtube': return 'play_circle';
+      case 'ppt': return 'presentation_chart_line';
+      default: return 'link';
+    }
+  };
+
   return (
-    <main className="relative bg-background min-h-screen">
+    <main className="relative bg-[#0e0e0e] min-h-screen">
       {/* Dynamic Hero Section */}
-      <section className="relative min-h-[80vh] flex flex-col justify-end pt-32 px-6 pb-24 overflow-hidden">
+      <section className="relative min-h-[90vh] flex flex-col justify-end pt-32 px-6 pb-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             alt={project.title} 
-            className="w-full h-full object-cover opacity-30 mix-blend-luminosity" 
+            className="w-full h-full object-cover opacity-20 mix-blend-luminosity brightness-75 scale-110" 
             src={project.image}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
-          <div className="absolute inset-0 architect-grid opacity-20 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0e0e0e] via-[#0e0e0e]/70 to-transparent"></div>
+          <div className="absolute inset-0 architect-grid opacity-30 pointer-events-none"></div>
         </div>
         
         <div className="relative z-10 max-w-7xl mx-auto w-full">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-block py-1 px-3 border border-primary/30 rounded-full bg-primary/5 backdrop-blur-md mb-8"
+            className="inline-block py-1.5 px-4 border border-primary/40 rounded-full bg-primary/5 backdrop-blur-md mb-8"
           >
-            <span className="font-label text-[10px] uppercase tracking-[0.3em] text-primary">Deployed System_v.1</span>
+            <span className="font-label text-[10px] uppercase tracking-[0.4em] text-primary font-black">Archive_Index :: {id.toUpperCase()}</span>
           </motion.div>
           
           <motion.h1 
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 }}
-            className="font-headline font-extrabold text-5xl md:text-8xl tracking-tighter leading-none mb-6 uppercase max-w-4xl"
+            className="font-headline font-black text-6xl md:text-9xl tracking-[ -0.05em] leading-[0.8] mb-10 uppercase max-w-5xl"
           >
             {project.title.split(' ').map((word, i) => (
-              <span key={i} className={i % 2 !== 0 ? "text-primary" : "text-white"}>{word} </span>
+              <span key={i} className={i % 2 !== 0 ? "text-primary" : "text-white"}>{word}<br className="hidden md:block" /></span>
             ))}
           </motion.h1>
           
@@ -255,90 +273,91 @@ const ProjectDetail = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
-            className="font-headline text-lg md:text-2xl text-gray-400 max-w-2xl leading-tight uppercase tracking-tight italic"
+            className="font-headline text-xl md:text-3xl text-gray-500 max-w-3xl leading-tight uppercase tracking-tighter italic border-l-4 border-primary/30 pl-6"
           >
             {project.tagline}
           </motion.p>
         </div>
       </section>
 
-      {/* Problem & Solution */}
-      <section className="py-24 md:py-32 px-6 border-t border-white/5">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-32">
-          <div className="space-y-8">
-            <h2 className="font-label text-[10px] uppercase tracking-[0.5em] text-primary underline underline-offset-8">Problem_Context</h2>
-            <p className="text-white leading-relaxed text-xl font-light">
+      {/* Problem & Solution - Enhanced Contrast & Boldness */}
+      <section className="py-24 md:py-48 px-6 border-t border-white/5 bg-[#0a0a0a]">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-24 md:gap-40">
+          <div className="space-y-10 group">
+            <h2 className="font-label text-[11px] uppercase tracking-[0.6em] text-primary/60 flex items-center gap-4">
+              <span className="w-8 h-px bg-primary/30"></span>
+              The Problem Statement
+            </h2>
+            <p className="text-white leading-[1.1] text-4xl md:text-6xl font-headline font-black uppercase tracking-tighter group-hover:text-primary transition-colors duration-500">
               {project.problem}
             </p>
           </div>
-          <div className="space-y-8">
-            <h2 className="font-label text-[10px] uppercase tracking-[0.5em] text-primary underline underline-offset-8">Engineered_Solution</h2>
-            <p className="text-on-surface-variant leading-relaxed text-lg italic opacity-80">
+          <div className="space-y-10">
+            <h2 className="font-label text-[11px] uppercase tracking-[0.6em] text-primary/60 flex items-center gap-4">
+              <span className="w-8 h-px bg-primary/30"></span>
+              Engineered Solution
+            </h2>
+            <p className="text-gray-400 leading-relaxed text-xl md:text-2xl font-light italic border-l border-white/10 pl-10">
               {project.solution}
             </p>
           </div>
         </div>
       </section>
 
-      {/* Architecture Visualizer */}
-      <section className="py-24 px-6 bg-surface-container-low architect-grid relative border-y border-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="font-label text-[10px] uppercase tracking-[0.5em] text-primary mb-4">Pipeline_Flow</h2>
-            <h3 className="font-headline font-bold text-4xl tracking-tight uppercase">System Architecture</h3>
-          </div>
-          
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 overflow-x-auto pb-4">
-            {project.architecture.map((item, idx) => (
-              <React.Fragment key={idx}>
-                <motion.div 
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: idx * 0.1 }}
-                  className="w-full md:w-64 bg-surface p-6 rounded-xl border border-outline-variant/10 text-center relative z-10"
-                >
-                  <span className="font-label text-[10px] uppercase text-primary block mb-2">{item.step}</span>
-                  <h4 className="font-headline font-bold text-sm tracking-widest text-white">{item.desc}</h4>
-                </motion.div>
-                {idx < project.architecture.length - 1 && (
-                  <div className="hidden md:block text-primary/40">
-                    <span className="material-symbols-outlined rotate-0">arrow_forward</span>
-                  </div>
-                )}
-                {idx < project.architecture.length - 1 && (
-                  <div className="md:hidden text-primary/40 py-2">
-                    <span className="material-symbols-outlined rotate-90">arrow_forward</span>
-                  </div>
-                )}
-              </React.Fragment>
-            ))}
-          </div>
+      {/* Architecture Visualizer - High Contrast Fix */}
+      <section className="py-32 px-6 bg-[#0e0e0e] architect-grid relative border-y border-white/5">
+        <div className="max-w-7xl mx-auto relative z-10 text-center mb-24">
+            <h2 className="font-label text-[11px] uppercase tracking-[0.6em] text-primary mb-6">Pipeline_Intelligence</h2>
+            <h3 className="font-headline font-black text-5xl md:text-7xl tracking-tighter uppercase text-white">System Architecture</h3>
+        </div>
+        
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 pb-4">
+          {project.architecture.map((item, idx) => (
+            <React.Fragment key={idx}>
+              <motion.div 
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: idx * 0.1, type: "spring", stiffness: 100 }}
+                className="w-full md:w-72 bg-[#1a1a1a] p-8 rounded-2xl border-2 border-primary/20 hover:border-primary transition-all duration-300 shadow-2xl relative group"
+              >
+                <div className="absolute -top-4 -left-4 w-10 h-10 bg-primary text-black font-black flex items-center justify-center rounded-lg text-xs font-label">0{idx+1}</div>
+                <span className="font-label text-[10px] uppercase tracking-widest text-primary/70 block mb-3">{item.step}</span>
+                <h4 className="font-headline font-black text-lg md:text-xl tracking-tight text-white uppercase leading-none">{item.desc}</h4>
+                <div className="mt-4 h-1 w-0 group-hover:w-full bg-primary transition-all duration-500"></div>
+              </motion.div>
+              {idx < project.architecture.length - 1 && (
+                <div className="text-primary flex items-center justify-center">
+                  <span className="material-symbols-outlined text-4xl md:rotate-0 rotate-90 opacity-40">double_arrow</span>
+                </div>
+              )}
+            </React.Fragment>
+          ))}
         </div>
       </section>
 
-      {/* Details Grid: Features, Stack, Challenges, Impact */}
-      <section className="py-24 px-6">
+      {/* Details Grid */}
+      <section className="py-32 px-6 bg-[#0a0a0a]">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
             
             {/* Features */}
-            <div className="space-y-6">
-              <h4 className="font-label text-[10px] uppercase tracking-[0.4em] text-primary">Core_Features</h4>
-              <ul className="space-y-4">
+            <div className="space-y-8">
+              <h4 className="font-label text-[11px] uppercase tracking-[0.5em] text-primary font-black">Core_Features</h4>
+              <ul className="space-y-6">
                 {project.features.map((f, i) => (
-                  <li key={i} className="flex gap-3 text-sm text-gray-300 items-start">
-                    <span className="text-primary-dim">•</span> {f}
+                  <li key={i} className="flex gap-4 text-base text-gray-300 items-start font-label tracking-tight">
+                    <span className="text-primary mt-1">✦</span> {f}
                   </li>
                 ))}
               </ul>
             </div>
 
             {/* Tech Stack */}
-            <div className="space-y-6">
-              <h4 className="font-label text-[10px] uppercase tracking-[0.4em] text-primary">Technical_Stack</h4>
-              <div className="flex flex-wrap gap-2">
+            <div className="space-y-8">
+              <h4 className="font-label text-[11px] uppercase tracking-[0.5em] text-primary font-black">Technical_Stack</h4>
+              <div className="flex flex-wrap gap-3">
                 {project.stack.map((s, i) => (
-                  <span key={i} className="px-3 py-1 bg-white/5 border border-white/10 rounded text-[10px] font-label text-white uppercase tracking-wider">
+                  <span key={i} className="px-4 py-2 bg-primary/5 border border-primary/20 rounded-lg text-[11px] font-label text-white uppercase tracking-[0.2em] hover:bg-primary/20 transition-colors">
                     {s}
                   </span>
                 ))}
@@ -346,11 +365,11 @@ const ProjectDetail = () => {
             </div>
 
             {/* Challenges */}
-            <div className="space-y-6">
-              <h4 className="font-label text-[10px] uppercase tracking-[0.4em] text-primary">Complexity_Resolved</h4>
-              <ul className="space-y-4">
+            <div className="space-y-8">
+              <h4 className="font-label text-[11px] uppercase tracking-[0.5em] text-primary font-black">Complexity_Resolved</h4>
+              <ul className="space-y-6">
                 {project.challenges.map((c, i) => (
-                  <li key={i} className="text-sm text-gray-400 italic">
+                  <li key={i} className="text-base text-gray-500 italic font-body border-l-2 border-white/5 pl-6 py-1">
                     {c}
                   </li>
                 ))}
@@ -358,12 +377,12 @@ const ProjectDetail = () => {
             </div>
 
             {/* Impact */}
-            <div className="space-y-6">
-              <h4 className="font-label text-[10px] uppercase tracking-[0.4em] text-primary">Operational_Impact</h4>
-              <ul className="space-y-4">
+            <div className="space-y-8">
+              <h4 className="font-label text-[11px] uppercase tracking-[0.5em] text-primary font-black">Operational_Impact</h4>
+              <ul className="space-y-6">
                 {project.impact.map((imp, i) => (
-                  <li key={i} className="flex gap-3 text-sm text-white font-headline font-bold uppercase tracking-tight">
-                    <span className="text-green-400">»</span> {imp}
+                  <li key={i} className="p-4 bg-white/5 border-l-4 border-green-500/50 text-sm text-white font-headline font-bold uppercase tracking-tight leading-tight">
+                    {imp}
                   </li>
                 ))}
               </ul>
@@ -373,27 +392,50 @@ const ProjectDetail = () => {
         </div>
       </section>
 
-      {/* Final Action / Links */}
-      <section className="py-24 px-6 bg-surface-container-low border-t border-white/5">
-        <div className="max-w-3xl mx-auto text-center space-y-12">
-          <h3 className="font-headline font-black text-4xl uppercase tracking-tighter">System_Deployment_Access</h3>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
+      {/* Enhanced Links Section with Creativity */}
+      <section className="py-48 px-6 bg-[#0e0e0e] border-t border-white/5 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 blur-[120px] rounded-full"></div>
+        <div className="max-w-5xl mx-auto text-center relative z-10">
+          <motion.h3 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="font-headline font-black text-5xl md:text-8xl uppercase tracking-tighter mb-20 text-white"
+          >
+            Access_The_System
+          </motion.h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {project.links.map((link, i) => (
-              <a 
+              <motion.a 
                 key={i} 
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`px-10 py-5 rounded-full font-headline font-bold uppercase text-sm transition-all text-center
-                  ${i === 0 ? "bg-primary text-on-primary-fixed cinematic-glow" : "border border-white/20 text-white hover:bg-white/5"}
-                `}
+                whileHover={{ scale: 1.05, y: -10 }}
+                whileTap={{ scale: 0.95 }}
+                className="group relative flex flex-col items-center justify-center p-12 bg-[#151515] border border-white/10 rounded-3xl hover:border-primary transition-all duration-500 overflow-hidden"
               >
-                {link.label}
-              </a>
+                <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <span className="material-symbols-outlined text-5xl text-primary mb-6 group-hover:scale-125 transition-transform duration-500">
+                  {getLinkIcon(link.type)}
+                </span>
+                <span className="font-headline font-black text-lg md:text-xl uppercase tracking-tight text-white mb-2">{link.label}</span>
+                <span className="font-label text-[10px] uppercase tracking-[0.4em] text-gray-500 group-hover:text-primary transition-colors">
+                  Open_Resource &raquo;
+                </span>
+                
+                {/* Creative light sweep effect on hover */}
+                <div className="absolute -inset-full h-full w-1/2 z-0 block transform -skew-x-12 bg-gradient-to-r from-transparent via-white/5 to-transparent opacity-40 group-hover:animate-sweep"></div>
+              </motion.a>
             ))}
           </div>
-          <Link to="/" className="block pt-8 font-label text-[10px] uppercase tracking-[.5em] text-outline hover:text-primary transition-colors">
-            « Return_to_Main_Grid
+          
+          <Link 
+            to="/" 
+            className="inline-flex items-center gap-4 mt-24 py-4 px-10 border border-white/10 rounded-full font-label text-[11px] uppercase tracking-[.6em] text-gray-500 hover:text-primary hover:border-primary/50 transition-all"
+          >
+            <span className="material-symbols-outlined text-sm">west</span>
+            Return_to_Main_Grid
           </Link>
         </div>
       </section>

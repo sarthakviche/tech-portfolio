@@ -46,7 +46,7 @@ const AboutMe = () => {
               transition={{ duration: 0.7 }}
               className="font-headline font-bold text-3xl md:text-4xl text-white leading-snug"
             >
-              Engineering student building ML systems that operate under real constraints — not just in notebooks.
+              Engineering student building ML systems that operate under real constraints, not just in notebooks.
             </motion.h2>
 
             <motion.div
