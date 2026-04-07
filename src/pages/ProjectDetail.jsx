@@ -9,10 +9,10 @@ const projectData = {
     problem: "Financial institutions deal with massive volumes of transactions daily, making it difficult to identify fraudulent patterns in real time. Even when fraud is detected, generating Suspicious Activity Reports (SARs) is a manual, time-consuming process that requires domain expertise and slows down compliance workflows.",
     solution: "I built a two-part system: 1) A fraud detection engine that flags suspicious transactions using machine learning, and 2) A SAR generation module that converts flagged activity into structured, compliance-ready reports. The goal was to reduce manual investigation effort while improving consistency in reporting.",
     architecture: [
-       { step: "Data Ingest", desc: "Transaction Data Stream" },
-       { step: "Processing", desc: "Feature Engineering & ML Model" },
-       { step: "Intelligence", desc: "Fraud Score & Flagging" },
-       { step: "Output", desc: "LLM-based SAR Generator" }
+      { step: "Data Ingest", desc: "Transaction Data Stream" },
+      { step: "Processing", desc: "Feature Engineering & ML Model" },
+      { step: "Intelligence", desc: "Fraud Score & Flagging" },
+      { step: "Output", desc: "LLM-based SAR Generator" }
     ],
     features: [
       "Real-time fraud scoring",
@@ -35,7 +35,7 @@ const projectData = {
     links: [
       { label: "GitHub Repository", url: "https://github.com/sarthakviche", type: "github" },
       { label: "Demo Video", url: "#", type: "youtube" },
-      { label: "Technical PPT", url: "#", type: "ppt" }
+      { label: "Technical PPT", url: "https://drive.google.com/file/d/14EWUHBiWsLLX_f_7YWbi4A7jnq15x8uH/view?usp=drive_link", type: "ppt" }
     ],
     image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2070&auto=format&fit=crop"
   },
@@ -45,10 +45,10 @@ const projectData = {
     problem: "Emergency response systems often suffer from inefficient routing, lack of prioritization, and delayed decision-making, leading to critical delays in life-threatening situations.",
     solution: "A system that dynamically prioritizes patients based on severity, assigns ambulances intelligently, and adapts to real-time constraints like traffic and roadblocks. Built during a hackathon to simulate real-world emergency scenarios.",
     architecture: [
-       { step: "Event", desc: "Emergency Input" },
-       { step: "Logic", desc: "Priority Scoring" },
-       { step: "Navigation", desc: "Routing Engine & Constraints" },
-       { step: "Response", desc: "Ambulance Allocation" }
+      { step: "Event", desc: "Emergency Input" },
+      { step: "Logic", desc: "Priority Scoring" },
+      { step: "Navigation", desc: "Routing Engine & Constraints" },
+      { step: "Response", desc: "Ambulance Allocation" }
     ],
     features: [
       "Dynamic prioritization logic",
@@ -80,10 +80,10 @@ const projectData = {
     problem: "Semiconductor manufacturing requires extremely high precision. Even microscopic defects can lead to product failures, reduced yield, and high financial losses. Manual inspection is slow and error-prone.",
     solution: "A computer vision system that analyzes wafer images, detects defects in real time, and flags anomalies during manufacturing to improve quality control.",
     architecture: [
-       { step: "Vision", desc: "Microscopic Camera Capture" },
-       { step: "Preprocessing", desc: "Image Normalization" },
-       { step: "AI", desc: "CV Model Inference" },
-       { step: "Decision", desc: "Output Classification" }
+      { step: "Vision", desc: "Microscopic Camera Capture" },
+      { step: "Preprocessing", desc: "Image Normalization" },
+      { step: "AI", desc: "CV Model Inference" },
+      { step: "Decision", desc: "Output Classification" }
     ],
     features: [
       "Automated defect detection",
@@ -104,7 +104,7 @@ const projectData = {
     links: [
       { label: "GitHub Repository", url: "https://github.com/sarthakviche", type: "github" },
       { label: "Demo Video", url: "#", type: "youtube" },
-      { label: "Technical PPT", url: "#", type: "ppt" }
+      { label: "Technical PPT", url: "https://canva.link/42y0f1lgvcs1ldk", type: "ppt" }
     ],
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop"
   },
@@ -114,10 +114,10 @@ const projectData = {
     problem: "Small businesses struggle with consistent content creation, maintaining brand voice, and scaling across platforms.",
     solution: "A system that generates structured content, maintains context across outputs, and supports multi-platform publishing using advanced LLM workflows.",
     architecture: [
-       { step: "Input", desc: "User Requirements" },
-       { step: "Context", desc: "Context Builder & Brand Voice" },
-       { step: "Gen", desc: "Prompt Engine & LLM" },
-       { step: "Format", desc: "Multi-platform Structured Output" }
+      { step: "Input", desc: "User Requirements" },
+      { step: "Context", desc: "Context Builder & Brand Voice" },
+      { step: "Gen", desc: "Prompt Engine & LLM" },
+      { step: "Format", desc: "Multi-platform Structured Output" }
     ],
     features: [
       "Context-aware generation",
@@ -138,7 +138,7 @@ const projectData = {
     links: [
       { label: "GitHub Repository", url: "https://github.com/sarthakviche", type: "github" },
       { label: "Workflow Demo", url: "#", type: "youtube" },
-      { label: "Strategy Slides", url: "#", type: "ppt" }
+      { label: "Strategy Slides", url: "https://drive.google.com/file/d/1cXmPfYFy1JfvXvftmI-Adbnq_LFD660J/view?usp=drive_link", type: "ppt" }
     ],
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop"
   },
@@ -148,10 +148,10 @@ const projectData = {
     problem: "Mental health issues often go unnoticed due to lack of early detection methods.",
     solution: "An NLP-based system that analyzes text data, identifies linguistic patterns, and explores correlations with mental health indicators for research purposes.",
     architecture: [
-       { step: "Text", desc: "Raw Data Ingest" },
-       { step: "Prep", desc: "Linguistic Preprocessing" },
-       { step: "Analysis", desc: "Feature Extraction" },
-       { step: "Insight", desc: "Pattern Correlation" }
+      { step: "Text", desc: "Raw Data Ingest" },
+      { step: "Prep", desc: "Linguistic Preprocessing" },
+      { step: "Analysis", desc: "Feature Extraction" },
+      { step: "Insight", desc: "Pattern Correlation" }
     ],
     features: [
       "Text preprocessing",
@@ -181,10 +181,10 @@ const projectData = {
     problem: "Rapidly evolving field of AI Agents lacks structured reviews for multi-agent system orchestration.",
     solution: "Conducted an industry-sponsored systematic review studying agent frameworks, architectures, and practical application trade-offs.",
     architecture: [
-       { step: "Frameworks", desc: "Study of Agentic Systems" },
-       { step: "Architecture", desc: "Analysis of Workflows" },
-       { step: "Comparison", desc: "Real-world App Evaluation" },
-       { step: "Review", desc: "Synthesis of Insights" }
+      { step: "Frameworks", desc: "Study of Agentic Systems" },
+      { step: "Architecture", desc: "Analysis of Workflows" },
+      { step: "Comparison", desc: "Real-world App Evaluation" },
+      { step: "Review", desc: "Synthesis of Insights" }
     ],
     features: [
       "Framework analysis",
@@ -227,7 +227,7 @@ const ProjectDetail = () => {
   }
 
   const getLinkIcon = (type) => {
-    switch(type) {
+    switch (type) {
       case 'github': return 'code';
       case 'youtube': return 'play_circle';
       case 'ppt': return 'presentation_chart_line';
@@ -240,25 +240,25 @@ const ProjectDetail = () => {
       {/* Dynamic Hero Section */}
       <section className="relative min-h-[90vh] flex flex-col justify-end pt-32 px-6 pb-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
-            alt={project.title} 
-            className="w-full h-full object-cover opacity-20 mix-blend-luminosity brightness-75 scale-110" 
+          <img
+            alt={project.title}
+            className="w-full h-full object-cover opacity-20 mix-blend-luminosity brightness-75 scale-110"
             src={project.image}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0e0e0e] via-[#0e0e0e]/70 to-transparent"></div>
           <div className="absolute inset-0 architect-grid opacity-30 pointer-events-none"></div>
         </div>
-        
+
         <div className="relative z-10 max-w-7xl mx-auto w-full">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="inline-block py-1.5 px-4 border border-primary/40 rounded-full bg-primary/5 backdrop-blur-md mb-8"
           >
             <span className="font-label text-[10px] uppercase tracking-[0.4em] text-primary font-black">Archive_Index :: {id.toUpperCase()}</span>
           </motion.div>
-          
-          <motion.h1 
+
+          <motion.h1
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 }}
@@ -268,8 +268,8 @@ const ProjectDetail = () => {
               <span key={i} className={i % 2 !== 0 ? "text-primary" : "text-white"}>{word}<br className="hidden md:block" /></span>
             ))}
           </motion.h1>
-          
-          <motion.p 
+
+          <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
@@ -309,16 +309,16 @@ const ProjectDetail = () => {
         {/* Decorative architectural elements for depth */}
         <div className="absolute top-0 right-0 w-1/3 h-full architect-grid opacity-20 pointer-events-none"></div>
         <div className="absolute bottom-0 left-0 w-1/3 h-full architect-grid opacity-20 pointer-events-none"></div>
-        
+
         <div className="max-w-7xl mx-auto relative z-10 text-center mb-24">
-            <h2 className="font-label text-[10px] uppercase tracking-[0.6em] text-primary mb-6">Pipeline_Intelligence</h2>
-            <h3 className="font-headline font-black text-5xl md:text-7xl tracking-tighter uppercase text-white outline-text">System Architecture</h3>
+          <h2 className="font-label text-[10px] uppercase tracking-[0.6em] text-primary mb-6">Pipeline_Intelligence</h2>
+          <h3 className="font-headline font-black text-5xl md:text-7xl tracking-tighter uppercase text-white outline-text">System Architecture</h3>
         </div>
-        
+
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8 md:gap-6 relative z-10">
           {project.architecture.map((item, idx) => (
             <React.Fragment key={idx}>
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: idx * 0.1 }}
@@ -326,14 +326,14 @@ const ProjectDetail = () => {
               >
                 {/* Glow effect for card */}
                 <div className="absolute -top-12 -right-12 w-24 h-24 bg-primary/20 blur-[40px] rounded-full group-hover:bg-primary/40 transition-all duration-500"></div>
-                
+
                 <div className="flex items-center justify-between mb-6">
-                  <div className="w-8 h-8 border border-primary/40 flex items-center justify-center rounded text-[10px] font-label text-primary">{idx+1}</div>
+                  <div className="w-8 h-8 border border-primary/40 flex items-center justify-center rounded text-[10px] font-label text-primary">{idx + 1}</div>
                   <span className="font-label text-[9px] uppercase tracking-[0.3em] text-primary/40">{item.step}</span>
                 </div>
-                
+
                 <h4 className="font-headline font-bold text-lg tracking-tight text-white uppercase leading-tight min-h-[3rem]">{item.desc}</h4>
-                
+
                 <div className="mt-6 flex items-center gap-2">
                   <div className="h-px flex-1 bg-white/10"></div>
                   <div className="w-1.5 h-1.5 rounded-full bg-primary/40"></div>
@@ -353,7 +353,7 @@ const ProjectDetail = () => {
       <section className="py-32 px-6 bg-[#0a0a0a]">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
-            
+
             {/* Features */}
             <div className="space-y-8">
               <h4 className="font-label text-[11px] uppercase tracking-[0.5em] text-primary font-black">Core_Features</h4>
@@ -410,18 +410,18 @@ const ProjectDetail = () => {
       <section className="py-48 px-6 bg-[#0e0e0e] border-t border-white/5 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 blur-[120px] rounded-full"></div>
         <div className="max-w-5xl mx-auto text-center relative z-10">
-          <motion.h3 
+          <motion.h3
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             className="font-headline font-black text-5xl md:text-8xl uppercase tracking-tighter mb-20 text-white"
           >
             Access_The_System
           </motion.h3>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {project.links.map((link, i) => (
-              <motion.a 
-                key={i} 
+              <motion.a
+                key={i}
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -437,15 +437,15 @@ const ProjectDetail = () => {
                 <span className="font-label text-[10px] uppercase tracking-[0.4em] text-gray-500 group-hover:text-primary transition-colors">
                   Open_Resource &raquo;
                 </span>
-                
+
                 {/* Creative light sweep effect on hover */}
                 <div className="absolute -inset-full h-full w-1/2 z-0 block transform -skew-x-12 bg-gradient-to-r from-transparent via-white/5 to-transparent opacity-40 group-hover:animate-sweep"></div>
               </motion.a>
             ))}
           </div>
-          
-          <Link 
-            to="/" 
+
+          <Link
+            to="/"
             className="inline-flex items-center gap-4 mt-24 py-4 px-10 border border-white/10 rounded-full font-label text-[11px] uppercase tracking-[.6em] text-gray-500 hover:text-primary hover:border-primary/50 transition-all"
           >
             <span className="material-symbols-outlined text-sm">west</span>

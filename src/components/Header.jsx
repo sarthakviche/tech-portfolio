@@ -9,8 +9,8 @@ const Header = () => {
           Sarthak Viche
         </Link>
         <div className="hidden md:flex items-center gap-6">
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             className="text-[#2962FF] font-black border-b-2 border-[#2962FF] pb-0.5 font-headline tracking-tight uppercase hover:text-white hover:scale-105 transition-all duration-300 no-underline"
           >
             Home
@@ -21,8 +21,8 @@ const Header = () => {
         </div>
         <div className="flex items-center gap-4 ml-4">
           <a
-            href="/resume.pdf"
-            download
+            href="https://drive.google.com/file/d/1v1Hd5d-ENZFwhUv3HtthtHAw1vdoHoS4/view?usp=sharing"
+
             className="hidden sm:flex items-center gap-2 px-4 py-1.5 bg-primary/10 border border-primary/30 rounded-full font-label text-[10px] uppercase tracking-widest text-primary hover:bg-primary hover:text-white transition-all duration-300"
           >
             <span className="material-symbols-outlined text-sm">download</span>
